@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  locust:
+    build: .
+    container_name: locust_digipay
+    ports:
+     - "8089:8089"
+    volumes:
+      - ./:/mnt/locust
+    command: locust --host http://google.com -f /digipay/locustfile.py
+
+
+  locust-metrics-exporter:
+    image: containersol/locust_exporter
+    ports:
+        - "9646:9646"
+    environment:
+        - LOCUST_EXPORTER_URI=http://locust:8089
+    depends_on:
+        - locust
+    
+    
+    prometheus:
+      image: prom/prometheus:latest
+      container_name: prometheus
+      ports:
+        - 9090:9090
+      command:
+        - --config.file=/etc/prometheus/prometheus.yml
+      volumes:
+        - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro

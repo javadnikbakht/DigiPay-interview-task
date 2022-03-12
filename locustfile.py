@@ -21,17 +21,6 @@ class UserTasks(TaskSet):
     def get_google_3rd_link(self):
         headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
-            'Cookie': 'CONSENT=PENDING+888; NID=511=G6xzBmCsSGGY43FSqR6caFF1Z8YNrsUPqKHtVlp6xlfpPplgUvCqFX-_Y4oupTmnGvQDptfN39dazbMVFY8JBm9ZPsBhbFnvbBG_3-3-3h6V5XnSTWD4i9lPgPOzCA97N6MPfjUYPHCg8FZl_u9TICSQfgMhswncQ2TvXBGTPFjvCc9YXdfW2qIoCi_zsVXx64bmZYDFc1rLjtpk5T9icYzGHLexBzXAROW0dO6si1bYg-BNlUGR0OK43g; SID=HQhwWwWiB0UfWHrZ8kZp0OArR-k5DVT5wEjNd-kp0b4uVkqiHvevOLGMqKeCUkZYC9cwoA.; __Secure-1PSID=HQhwWwWiB0UfWHrZ8kZp0OArR-k5DVT5wEjNd-kp0b4uVkqig41IXhtkBGeNPiAU49Gkvw.; __Secure-3PSID=HQhwWwWiB0UfWHrZ8kZp0OArR-k5DVT5wEjNd-kp0b4uVkqib2aY6QeBHNSyiHT_wzQe4g.; HSID=A0nYX7sSEGCeGSMz2; SSID=A_cMrP6CJ1xNxe9FY; APISID=aeKTZZV1Ajdud0FL/AY5b21LWIfFYKMs0t; SAPISID=iR7vYK3B-ToQSrrY/AbHeVW8vui_rixWsV; __Secure-1PAPISID=iR7vYK3B-ToQSrrY/AbHeVW8vui_rixWsV; __Secure-3PAPISID=iR7vYK3B-ToQSrrY/AbHeVW8vui_rixWsV; SIDCC=AJi4QfGokg9Qceh0rnwGmwJNgp6ea4-umTdAEf0B8h00XyFtOU-VbEVH6kIYjHety8SF5uQJMw; __Secure-3PSIDCC=AJi4QfEXoLQCr6BVeP9Xo8IBL5GmyE9ogu2FUT7nPtz8HWrzxDGZhfiRODS0I2zVAwnAnYSFbg; SEARCH_SAMESITE=CgQI9JQB; 1P_JAR=2022-03-12-19; OTZ=6404310_42_42_114990_38_379890; ANID=AHWqTUniv9xIsnju9MU_LRu3VjzImt3T5zCdaYsXAubcTn-bG_F56SW5Nq8bFXID; _dd_s=logs=1&id=0ee51809-8d8b-448d-90b4-0cd13d527798&created=1647111185171&expire=1647112821454; DV=Y36ixuvdHz6AIBy4P1MyROtQIz749xeI-LVhLnx5dgAAAHAXk3Gqw6shHgAAAND_N7s5Ubd7CwAAAEPmW5tYUB1MFAAAQOzyESqduvXI0-0BoMWoqNO-HGqHdXsAKIWroCxOgwaE3R4A',
-            'Upgrade-Insecure-Requests': '1',
-            'Sec-Fetch-Dest': 'document',
-            'Sec-Fetch-Mode': 'navigate',
-            'Sec-Fetch-Site': 'none',
-            'Sec-Fetch-User': '?1',
-            'TE': 'trailers'
         }
         params = {
             'q': self.get_random_word_from_dataset(),
